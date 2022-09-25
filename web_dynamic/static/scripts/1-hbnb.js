@@ -13,7 +13,7 @@ $(document).ready(() => {
 	}
 
 	if (Object.keys(check_amen_dict).length >= 1) {
-		$('.amenities H4').html(Object.values(checkBoxDict).join(', ') + '&nbsp;');
+		$('.amenities H4').html(Object.values(check_amen_dict).join(', ') + '&nbsp;');
 	} else {
 		$('.amenities H4').html('&nbsp;');
 	}
