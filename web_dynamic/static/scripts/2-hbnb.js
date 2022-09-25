@@ -27,7 +27,7 @@ $.get('http://0.0.0.0:5001/api/v1/status/', function(data,textStatus) {
 		$('div#api_status').removeClass('available');
 	}
 }).fail(function () {
-	windows.alert('Server response not recieved.');
+	window.alert('Server response not recieved.');
 	$('div#api_status').removeClass('available');
 });
 

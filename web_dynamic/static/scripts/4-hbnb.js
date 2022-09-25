@@ -28,7 +28,7 @@ $.get('http://0.0.0.0:5001/api/v1/status/', function(data,textStatus) {
 		$('div#api_status').removeClass('available');
 	}
 }).fail(function () {
-	windows.alert('Server response not recieved.');
+	window.alert('Server response not recieved.');
 	$('div#api_status').removeClass('available');
 });
 
@@ -45,14 +45,14 @@ function templatePrint (data, index) {
 	$.get(' http://0.0.0.0:5001/api/v1/users/${place.user_id}', function (data1, textStatus) {
 		name = data1.first_name;
 		lastName = data1.last_name;
-		const articleComplete = '<article>
+		const articleComplete = `<article>
 			<div class="title_box">
 			<h2>${place.name}</h2>
 			<div class="price_by_night">${place.price_by_night}</div>
 			</div>
 			<div class="information">
 			<div class="max_guest">${place.max_guest} Guests</div>
-			<div class="number_rooms">${place.number_rooms} Bedrooms}</div>
+			<div class="number_rooms">${place.number_rooms} Bedrooms</div>
 			<div class="number_bathrooms">${place.number_bathrooms} Bathrooms</div>
 			<div class="user">
 			<b>Owner:</b> ${name} ${lastName}
@@ -60,7 +60,7 @@ function templatePrint (data, index) {
 			<div class="description">
 		${place.description}
 		</div>
-		</article>';
+		</article>`;
 		templatePrint(data, index + 1);
 		$('section.places').append(articleComplete);
 });
@@ -79,7 +79,7 @@ $('BUTTON').click(function (){
 	success: (data) => { templatePrint(data, 0);}
 	};
 $.ajax(optionsApi);
-
+});
 /* Adding css */
 	$('.amenities ul li input[type="checkbox"]').css({ margin: '0px 10px 0px 0px', padding: '10px 0 0 0' });
 	$('.amenities H4').css({ height: '17px', 'max-width': '250px', 'text-overflow': 'ellipsis', 'white-space': 'nowrap', overflow: 'hidden' });
