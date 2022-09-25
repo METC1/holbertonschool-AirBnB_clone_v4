@@ -65,16 +65,20 @@ function templatePrint (data, index) {
 		$('section.places').append(articleComplete);
 });
 }
-/* Post request to places_search with list of amenities*/
-$.ajax({
+/* Move to BUTTON on click Post request to places_search with list of amenities*/
+$('BUTTON').click(function (){
+	const dataAmenities = { amenities: [...Object.keys(check_amen_dict)] };
+	console.log(dataAmenities);
+	$('ARTICLE').remove();
+	const optionsApi = {
 	type: 'POST',
 	url: 'http://0.0.0.0:5001/api/v1/places_search',
-	data: '{}',
+	data: JSON.stringify(dataAmenities),
 	dataType: 'json',
 	contentType: 'application/json',
 	success: (data) => { templatePrint(data, 0);}
-	});
-
+	};
+$.ajax(optionsApi);
 
 /* Adding css */
 	$('.amenities ul li input[type="checkbox"]').css({ margin: '0px 10px 0px 0px', padding: '10px 0 0 0' });
