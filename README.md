@@ -154,7 +154,7 @@ EOF  all  create  destroy  help  quit  show  update
 No known bugs at this time. 
 
 ## Authors
-Mauricio Thomae - [Github](https://github.com/METC1)
+Mauricio Thomae - [Github](https://github.com/METC1)   
 Claudia Perez - [Github] (https://github.om/21Kgold)   
 Alexa Orrico - [Github](https://github.com/alexaorrico) / [Twitter](https://twitter.com/alexa_orrico)  
 Jennifer Huang - [Github](https://github.com/jhuang10123) / [Twitter](https://twitter.com/earthtojhuang)  
